@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="xoanhanvien" action="../Controller/C_StaffDepartment.php" method="post">
+        <table border="1" width="100%">
+        <caption>Du lieu bang nhan vien </caption>
+            <tr><th>IDNV</th><th>Ho ten</th><th>IDPB</th><th>Dia chi</th><th>Xóa nhân viên</th></tr>
+            <?php
+                if($staffs!=null)
+                {
+                    for($i = 0; $i < sizeof($staffs); $i++) {
+                        echo '<tr><td>'.$staffs[$i]->IDNV.'</td><td>'.$staffs[$i]->Hoten.'</td><td>'.$staffs[$i]->IDPB.'</td><td>'.$staffs[$i]->Diachi.'</td><td align="center"><input type="checkbox" value="'.$staffs[$i]->IDNV.'" name="choice[]"></td></tr>';
+                    }    
+                }
+
+            ?>
+        </table>
+    
+        <center>
+            <tr>
+                <td align="right"><input type="submit" name="xoanhieunhanvien" value="Xoa nhan vien"></td>
+                <input type="button" onclick="history.back();" value="Back">
+            </tr>
+        </center>
+</body>
+</html>

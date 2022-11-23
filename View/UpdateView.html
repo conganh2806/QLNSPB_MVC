@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="../Controller/C_StaffDepartment.php" method="post">
+        <table border="1" width="100%">
+            <caption>Du lieu bang phong ban </caption>
+            <tr>
+                <th>Ma phong ban</th>
+                <th>Ten phong ban</th>
+                <th>Mo ta</TH>
+                <th>Cap nhat</th>
+                <?php
+                    if($departs!=null)
+                    {
+                        for($i = 0; $i < sizeof($departs); $i++) {
+                            echo '<tr><td>'.$departs[$i]->IDPB.'</td><td>'.$departs[$i]->Tenpb.'</td><td>'.$departs[$i]->Mota.'</td><td align="center"><a href="../Controller/C_StaffDepartment.php?IDPBtoUpdate='.$departs[$i]->IDPB.'">xxx</a></td></tr>';
+                        }
+                    }
+                        
+                ?>
+            </tr>
+        </table>
+        <center><input type="button" onclick="history.back();" value="Back"></center>
+    </form>
+</body>
+</html>

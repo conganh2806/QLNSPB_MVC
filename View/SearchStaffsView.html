@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        <caption>Du lieu bang nhan vien </caption>
+            <tr>
+                <th>IDNV</th>
+                <th>Ho ten</th>
+                <th>IDPB</th>
+                <th>Dia chi</th>
+            </tr>
+        <?php
+            if($staffs!=null)
+            {
+                for($i = 0; $i < sizeof($staffs); $i++) {
+                    echo '<tr><td>'. $staffs[$i]->IDNV .'</td><td>'.$staffs[$i]->Hoten.'</td><td>'.$staffs[$i]->IDPB.'</td><td>'.$staffs[$i]->Diachi.'</td></tr>';
+                }
+        
+            }
+        ?>
+</body>
+</html>

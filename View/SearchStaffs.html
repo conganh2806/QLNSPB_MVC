@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tim Kiem</h2>
+    <form name="timkiem" action="../Controller/C_StaffDepartment.php" method="post">
+        <div>
+            <label>IDNV</label>
+            <input type="radio" value="IDNV" name="choice"/>
+        </div>
+        <div>
+            <label>Ho ten</label>
+            <input type="radio" value="Hoten" name="choice"/>
+        </div>
+        <div>
+            <label>Dia chi</label>
+            <input type="radio" value="Diachi" name="choice"/>
+        </div>
+        <div>
+            <input type="text" value="" name="txtInput"/>
+        </div>
+        <input type="submit" value="OK" name="search" />
+        <input type="button" onclick="history.back();" value="Back">
+    </form>
+</body>
+</html>

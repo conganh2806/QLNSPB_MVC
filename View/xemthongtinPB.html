@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+    <caption>Du lieu bang phong ban </caption>
+    <tr><th>Ma phong ban</th><th>Ten phong ban</th><th>Mo ta</TH><th>Xem nhan vien</th></tr>
+    <?php
+        if($departs!=null)
+        {
+            for($i = 0; $i < sizeof($departs); $i++) {
+                echo '<tr><td>'.$departs[$i]->IDPB.'</td><td>'.$departs[$i]->Tenpb.'</td><td>'.$departs[$i]->Mota.'</td><td align="center"><a href="../Controller/C_StaffDepartment.php?IDPB='.$departs[$i]->IDPB.'">xxx</a></td></tr>';
+            }
+        }
+            
+    ?>
+  
+    </table>
+</body>
+</html>
